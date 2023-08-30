@@ -1,0 +1,222 @@
+openapi: 3.0.3
+info:
+  title: Title
+  description: Title
+  version: 1.0.0
+servers:
+  - url: 'http://localhost:8080/'
+paths:
+  /chansons:
+    get:
+      summary: show the chanson
+      tags:
+        - "Chansons"
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Chanson"
+    post:
+      summary: add the chanson
+      tags:
+        - "Chansons"
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Chanson"
+    put:
+      summary: add a new chanson
+      tags:
+        - "Chansons"
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                 $ref: "#/components/schemas/Chanson"
+    delete:
+      summary: remove chanson
+      tags:
+        - "Chansons"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                 $ref: "#/components/schemas/Chanson"
+  /artist:
+    get:
+      summary: show the artist
+      tags:
+        - "Artist"
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Artist"
+    post:
+      summary: add a new artist
+      tags:
+        - "Artist"
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Artist"
+    put:
+      summary: add a new artist
+      tags:
+        - "Artist"
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Artist"
+    delete:
+      summary: remove artist
+      tags:
+        - "Artist"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Artist"
+  /album:
+    get:
+      summary: show the album
+      tags:
+        - "Album"
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Album"
+    post:
+      summary: add the album
+      tags:
+        - "Album"
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Album"
+    put:
+      summary: add a new album
+      tags:
+        - "Album"
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Album"
+    delete:
+      summary: remove album
+      tags:
+        - "Album"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Album"
+components:
+  schemas:
+    Chanson:
+      type: object
+      properties:
+        id_chanson:
+          type: number
+          example: 1
+        title:
+          type: string
+          example: "hira"
+        dateCreation:
+          type: string
+          format: date
+          example: 09-07-2002
+        gender:
+          type: string
+          example: "rock"
+        lyrics:
+          type: string
+          example: "blabla"
+    Artist:
+      type: object
+      properties:
+        id_artist:
+          type: number
+          example: 1
+        name:
+          type: string
+          example: "bob"
+        lastName:
+          type: string
+          example: "joe"
+        genderArtist:
+          type: string
+          example: M
+        birthday:
+          type: string
+          format: date
+          example: 09-07-1984
+        death_date:
+          type: string
+          format: date
+          example: 09-07-1984
+    Album:
+      type: object
+      properties:
+        id_album:
+          type: number
+          example: 1
+        name:
+          type: string
+          example: "Mood"
+        dateCreation:
+          type: string
+          format: date
+          example: 09-02-2005
+
+
+
+
