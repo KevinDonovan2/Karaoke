@@ -25,7 +25,7 @@ public class ChansonController {
         return chansonService.insertSong(toInsert);
     }
     @PutMapping("/chanson")
-    public Chanson updateSong(@RequestBody Chanson toUpdate){
+    public Chanson updateSong( @RequestBody Chanson toUpdate) {
         return chansonService.updateSong(toUpdate);
     }
     @DeleteMapping("/chanson/{id}")

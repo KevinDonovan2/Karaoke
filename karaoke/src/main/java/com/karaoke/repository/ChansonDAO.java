@@ -10,6 +10,7 @@ public interface ChansonDAO {
     void insert(Chanson e);
     List<Chanson> findAll();
     Chanson findById(int id);
-    void update (Chanson e);
+    void update ( Chanson e);
     Chanson delete (int id);
+
 }

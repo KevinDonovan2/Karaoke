@@ -90,6 +90,7 @@ public class ArtistDAOImpl implements ArtistDAO{
             statement.setString(3,e.getGenderArtist());
             statement.setDate(4, Date.valueOf(e.getBirthday()));
             statement.setDate(5, Date.valueOf(e.getDeathDate()));
+            statement.setInt(6,e.getId_artist());
 
         } catch (SQLException ex) {
             throw new RuntimeException("Erreur lors de la mis à jour");

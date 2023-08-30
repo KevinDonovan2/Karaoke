@@ -80,13 +80,14 @@ public class ChansonDAOImpl implements ChansonDAO {
     }
 
     @Override
-    public void update (Chanson e) {
+    public void update ( Chanson e ) {
         String sql = "UPDATE Chanson SET title = ?, dateCreation = ?, gender = ?, lyrics = ? WHERE id_chanson = ?";
         try (PreparedStatement statement = connection.prepareStatement(sql)){
             statement.setString(1,e.getTitle());
             statement.setDate(2, Date.valueOf(e.getDateCreationSong()));
             statement.setString(3,e.getGender());
             statement.setString(4,e.getLyrics());
+            statement.setInt(5, e.getId_chanson());
 
         } catch (SQLException ex) {
             throw new RuntimeException("Erreur lors de la mis à jour");
