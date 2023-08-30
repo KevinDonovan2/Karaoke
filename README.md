@@ -13,6 +13,12 @@ And here is the `database modelization`
 
 If you need more information ,we have the API [here](./karaoke/doc/api.yaml)
 
+```sh
+
+https://petstore.swagger.io/?url=https://raw.githubusercontent.com/KevinDonovan2/Karaoke/main/karaoke/doc/api.yaml
+
+```
+
 ## Getting Started
 you just need to run the `KaraokeApplication.java`
 
